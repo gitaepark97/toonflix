@@ -41,18 +41,18 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void onPausePressed() {
-    timer.cancel();
     setState(() {
       isRunning = false;
     });
+    timer.cancel();
   }
 
   void onRestartPressd() {
-    timer.cancel();
     setState(() {
       totalSeconds = twentyFiveMinutes;
       isRunning = false;
     });
+    timer.cancel();
   }
 
   String format(int seconds) {
@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             : Icons.play_circle_outline,
                       ),
                     ),
-                    if (timer.isActive || totalSeconds != twentyFiveMinutes)
+                    if (totalSeconds != twentyFiveMinutes || isRunning)
                       IconButton(
                         onPressed: onRestartPressd,
                         iconSize: 120,
