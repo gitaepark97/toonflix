@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toonflix/models/webtoon_model.dart';
 import 'package:toonflix/services/api_service.dart';
-import 'package:toonflix/wedgets/webtoon_sidget.dart';
+import 'package:toonflix/widgets/webtoon_sidget.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
